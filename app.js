@@ -49,10 +49,10 @@ buttonNext.click(function () {
     answerQuiz(3, choice4, answerQuestion4); //answers qst 4
     answerQuiz(4, choice3, answerQuestion5); //answers qst 5
     answerQuiz(5, choice1, answerQuestion6); //answers qst 6
-    answerQuiz(6, choice4, answerQuestion7); //answers qst 7
+    answerQuiz(6, choice3, answerQuestion7); //answers qst 7
     answerQuiz(7, choice4, answerQuestion8); //answers qst 8
     answerQuiz(8, choice2, answerQuestion9); //answers qst 9
-    answerQuiz(9, choice2, answerQuestion10); //answers qst 10
+    answerQuiz(9, choice1, answerQuestion10); //answers qst 10
     
     if(index === 9){
         result.css({"display" : "block"});
