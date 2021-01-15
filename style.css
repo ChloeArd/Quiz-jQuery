@@ -94,3 +94,27 @@ input{
 #answerAll{
     display: none;
 }
+
+@media screen and (max-width: 1250px) {
+    #container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #imageQuestion{
+        width: 200px;
+    }
+    #question{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #imageQuestion{
+        display: none;
+    }
+    label{
+        font-size: 20px;
+    }
+}
