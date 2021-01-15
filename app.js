@@ -36,10 +36,10 @@ let answerQuestion3 = quizAnimaux[2].choix1;
 let answerQuestion4 = quizAnimaux[3].choix4;
 let answerQuestion5 = quizAnimaux[4].choix3;
 let answerQuestion6 = quizAnimaux[5].choix1;
-let answerQuestion7 = quizAnimaux[6].choix4;
+let answerQuestion7 = quizAnimaux[6].choix3;
 let answerQuestion8 = quizAnimaux[7].choix4;
 let answerQuestion9 = quizAnimaux[8].choix2;
-let answerQuestion10 = quizAnimaux[9].choix2;
+let answerQuestion10 = quizAnimaux[9].choix1;
 
 //When we press enter, we go to the next quiz and we check if the answer is right or wrong
 buttonNext.click(function () {
