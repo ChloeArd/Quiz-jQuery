@@ -24,7 +24,7 @@ body {
 }
 
 h1{
-    color: #C6C3BB;
+    color: white;
     font-family: 'Yusei Magic', sans-serif;
     font-size: 70px;
 }
@@ -39,9 +39,11 @@ h1{
     box-shadow: 5px 5px 5px #B5A68F;
     padding: 20px;
 }
-
-h2, #questions{
-    margin-bottom: 20px;
+h2, #final{
+    color: #937951;
+}
+h2, #questions, #final{
+    margin-bottom: 15px;
 }
 
 input{
@@ -79,5 +81,16 @@ input{
 }
 
 #result{
+    display: none;
+}
+
+#resultFinal{
+    font-size: 30px;
+    color: #937951;
+    display: none;
+    margin-bottom: 30px;
+}
+
+#answerAll{
     display: none;
 }
