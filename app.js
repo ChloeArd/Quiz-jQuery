@@ -13,6 +13,11 @@ let quizAnimaux = [
 let index = 0;
 let buttonNext = $("#enterNext");
 let result = $("#result");
+let choice1 = $("#choice1");
+let choice2 = $("#choice2");
+let choice3 = $("#choice3");
+let choice4 = $("#choice4");
+let score = 0;
 
 //Question 1
 $("#numero").html(quizAnimaux[0].numero);
@@ -35,9 +40,7 @@ let answerQuestion9 = quizAnimaux[8].choix2;
 let answerQuestion10 = quizAnimaux[9].choix2;
 
 buttonNext.click(function () {
-    if(index === 0){
-        if()
-    }
+    answerQuiz(0, choice2)
     if(index === 9){
         result.css({"display" : "block"});
         buttonNext.css({"display" : "none"});
@@ -57,4 +60,17 @@ buttonNext.click(function () {
     $("#imageQuestion").attr("src", quizAnimaux[index].image);
 })
 
+
+function answerQuiz(i, id){
+    if(index === i){
+        if(id.is(':checked') ){
+            alert("Bonne réponse !");
+            score++;
+            console.log(score);
+        }
+        else {
+            alert("Mauvaise réponse !");
+        }
+    }
+}
 
