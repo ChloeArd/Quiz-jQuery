@@ -71,7 +71,7 @@ buttonNext.click(function () {
     $("#labelChoice3").html(quizAnimaux[index].choix3);
     $("#labelChoice4").html(quizAnimaux[index].choix4);
     $("#imageQuestion").attr("src", quizAnimaux[index].image);
-    $("input").removeProp("checked");
+    $("input:checkbox").prop("checked", false)
 })
 
 //When you press result, the final score is displayed and the answers too
