@@ -29,6 +29,7 @@ $("#labelChoice3").html(quizAnimaux[0].choix3);
 $("#labelChoice4").html(quizAnimaux[0].choix4);
 $("#imageQuestion").attr("src", quizAnimaux[0].image);
 
+//animation
 $("#question2").fadeOut();
 $("#question2").fadeIn();
 //the answer to each question
@@ -101,12 +102,10 @@ function answerQuiz(i, id, answer){
         if(id.is(':checked') ){
             alert("Bonne réponse !");
             score++;
-            console.log(score);
         }
         else {
             alert("Mauvaise réponse ! C'était " + answer + "." );
         }
-
     }
 }
 
