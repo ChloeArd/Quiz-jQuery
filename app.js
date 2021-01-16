@@ -56,7 +56,7 @@ buttonNext.click(function () {
     answerQuiz(7, choice4, answerQuestion8); //answers qst 8
     answerQuiz(8, choice2, answerQuestion9); //answers qst 9
     answerQuiz(9, choice1, answerQuestion10); //answers qst 10
-    
+
     if(index === 9) {
         result.css({"display": "block"});
         buttonNext.css({"display": "none"});
@@ -73,7 +73,7 @@ buttonNext.click(function () {
     $("#labelChoice3").html(quizAnimaux[index].choix3);
     $("#labelChoice4").html(quizAnimaux[index].choix4);
     $("#imageQuestion").attr("src", quizAnimaux[index].image);
-    $("input:checkbox").prop("checked", false)
+    $("input:radio").prop("checked", false);
 })
 
 //When you press result, the final score is displayed and the answers too
@@ -99,7 +99,7 @@ result.click(function () {
 //check if the answer is right or wrong
 function answerQuiz(i, id, answer){
     if(index === i){
-        if(id.is(':checked') ){
+        if(id.is(':checked')){
             alert("Bonne réponse !");
             score++;
         }
@@ -108,4 +108,3 @@ function answerQuiz(i, id, answer){
         }
     }
 }
-
