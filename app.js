@@ -1,7 +1,7 @@
 let quizAnimaux = [
     {"numero" : 1, "Question" : "Quel est la famille du chien ?", "choix1" : "Félidés", "choix2" : "Canidés", "choix3" : "Bovin", "choix4" : "Amphibien", "image" : "https://images.unsplash.com/photo-1506903536293-8419385acdce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fGRvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 2, "Question" : "Comment s'appelle l'ancêtre commun à tous les êtres vivants ?", "choix1" : "LOLA", "choix2" : "LUCA", "choix3" : "ZOE", "choix4" : "REMI", "image" : "https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGFuaW1hbHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
-    {"numero" : 3, "Question" : "Comment appelle-t-on les animaux voyant la nuit ?", "choix1" : "Nyctalopie", "choix2" : "Negrophile", "choix3" : "Nocturne", "choix4" : "Fisdupe", "image" : "https://images.unsplash.com/photo-1571659315127-8e882c129e0b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8b3dsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
+    {"numero" : 3, "Question" : "Comment appelle-t-on les animaux voyant la nuit ?", "choix1" : "Nyctalope", "choix2" : "Negrophile", "choix3" : "Nocturne", "choix4" : "Fisdupe", "image" : "https://images.unsplash.com/photo-1571659315127-8e882c129e0b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8b3dsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 4, "Question" : "Quel animal ne vole pas ?", "choix1" : "Le pingouin", "choix2" : "La cigogne", "choix3" : "Le pélican", "choix4" : "Le manchot", "image" : "https://images.unsplash.com/photo-1582487809094-520150fdb872?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8cGVuZ3VpbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 5, "Question" : "Combien une pieuvre possède-t-elle de tentacules ?", "choix1" : "12", "choix2" : "10", "choix3" : "8", "choix4" : "6", "image" : "https://images.unsplash.com/photo-1548645933-c62d4468cbb9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8b2N0b3B1c3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 6, "Question" : "Comment appelle-t-on les 'pattes' d'un rapace ?", "choix1" : "Les serres", "choix2" : "Les aiguises", "choix3" : "Les griffes", "choix4" : "Les attrapes-tous", "image" : "https://images.unsplash.com/photo-1546930712-6be020e9538a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzR8fHJhcHRvcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
@@ -29,6 +29,8 @@ $("#labelChoice3").html(quizAnimaux[0].choix3);
 $("#labelChoice4").html(quizAnimaux[0].choix4);
 $("#imageQuestion").attr("src", quizAnimaux[0].image);
 
+$("#question2").fadeOut();
+$("#question2").fadeIn();
 //the answer to each question
 let answerQuestion1 = quizAnimaux[0].choix2;
 let answerQuestion2 = quizAnimaux[1].choix2;
@@ -54,16 +56,15 @@ buttonNext.click(function () {
     answerQuiz(8, choice2, answerQuestion9); //answers qst 9
     answerQuiz(9, choice1, answerQuestion10); //answers qst 10
     
-    if(index === 9){
-        result.css({"display" : "block"});
-        buttonNext.css({"display" : "none"});
-    }
-    else if(index === quizAnimaux.length - 1){
-        alert("fini");
+    if(index === 9) {
+        result.css({"display": "block"});
+        buttonNext.css({"display": "none"});
     }
     else {
         index ++;
     }
+    $("#question2").fadeOut(300);
+    $("#question2").fadeIn(1000);
     $("#numero").html(quizAnimaux[index].numero);
     $("#questions").html(quizAnimaux[index].Question);
     $("#labelChoice1").html(quizAnimaux[index].choix1);
@@ -91,7 +92,7 @@ result.click(function () {
     answerAll.append("<p>Question 8 : " + answerQuestion8 + "</p>");
     answerAll.append("<p>Question 9 : " + answerQuestion9 + "</p>");
     answerAll.append("<p>Question 10 : " + answerQuestion10 + "</p>");
-    answerAll.append("<img src='https://tse1.mm.bing.net/th?id=OIP.6VoUv1SLxrkw3NajqRjYBAHaE7&pid=Api&P=0&w=243&h=163'> A bientôt !")
+    answerAll.append("<img src='https://tse1.mm.bing.net/th?id=OIP.6VoUv1SLxrkw3NajqRjYBAHaE7&pid=Api&P=0&w=243&h=163'> Merci pour t'as participation !")
 });
 
 //check if the answer is right or wrong
