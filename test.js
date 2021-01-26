@@ -23,10 +23,10 @@ let score = 0;
 //Question 1
 $("#numero").html(quizAnimaux[0].numero);
 $("#questions").html(quizAnimaux[0].Question);
-$("#labelChoice1").html(quizAnimaux[0].choix1);
-$("#labelChoice2").html(quizAnimaux[0].choix2);
-$("#labelChoice3").html(quizAnimaux[0].choix3);
-$("#labelChoice4").html(quizAnimaux[0].choix4);
+choice1.html(quizAnimaux[0].choix1);
+choice2.html(quizAnimaux[0].choix2);
+choice3.html(quizAnimaux[0].choix3);
+choice4.html(quizAnimaux[0].choix4);
 $("#imageQuestion").attr("src", quizAnimaux[0].image);
 
 //animation
@@ -68,12 +68,11 @@ buttonNext.click(function () {
     $("#question2").fadeIn(1000);
     $("#numero").html(quizAnimaux[index].numero);
     $("#questions").html(quizAnimaux[index].Question);
-    $("#labelChoice1").html(quizAnimaux[index].choix1);
-    $("#labelChoice2").html(quizAnimaux[index].choix2);
-    $("#labelChoice3").html(quizAnimaux[index].choix3);
-    $("#labelChoice4").html(quizAnimaux[index].choix4);
+    choice1.html(quizAnimaux[index].choix1);
+    choice2.html(quizAnimaux[index].choix2);
+    choice3.html(quizAnimaux[index].choix3);
+    choice4.html(quizAnimaux[index].choix4);
     $("#imageQuestion").attr("src", quizAnimaux[index].image);
-    $("input:radio").prop("checked", false);
 })
 
 //When you press result, the final score is displayed and the answers too
@@ -99,12 +98,14 @@ result.click(function () {
 //check if the answer is right or wrong
 function answerQuiz(i, id, answer){
     if(index === i){
-        if(id.is(':checked')){
-            $(".modal-body").html("Bonne réponse !");
+        if(id.is(':click')){
+            alert("Bonne réponse !");
             score++;
         }
         else {
-            $(".modal-body").html("Mauvaise réponse ! C'était " + answer + "." );
+            alert("Mauvaise réponse ! C'était " + answer + "." );
         }
     }
 }
+
+//Faire qu'on clique sur les 4 paragraphes et modifier le reste
