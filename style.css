@@ -119,13 +119,27 @@ input{
 }
 
 @media screen and (max-width: 650px) {
-    #image{
-        display: none;
+    #container2 {
+        flex-direction: column-reverse;
+    }
+    #image, #answer {
+        margin: auto;
+    }
+    #imageQuestion {
+        width: 100%;
     }
     label{
         font-size: 20px;
     }
     h1{
         font-size: 50px;
+    }
+    #container {
+        width: 100%;
+        margin: 0;
+    }
+    #question {
+        width: 100%;
+        padding: 10px;
     }
 }
