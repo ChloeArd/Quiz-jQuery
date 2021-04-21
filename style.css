@@ -122,14 +122,19 @@ input{
     #container2 {
         flex-direction: column-reverse;
     }
-    #image, #answer {
+    #image {
         margin: auto;
+    }
+    #answer {
+        font-size: 20px;
+        margin-top: 20px;
+        width: 100%;
     }
     #imageQuestion {
         width: 100%;
     }
     label{
-        font-size: 20px;
+        font-size: 25px;
     }
     h1{
         font-size: 50px;
