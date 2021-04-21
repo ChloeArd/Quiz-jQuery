@@ -58,6 +58,10 @@ buttonNext.click(function () {
     answerQuiz(9, choice1, answerQuestion10); //answers qst 10
 
     if(index === 9) {
+        $("#titleQuestion").html("");
+        $("#questions").css("display", "none");
+        $("#answer").css("display", "none");
+        $("#image").css("display", "none");
         result.css({"display": "block"});
         buttonNext.css({"display": "none"});
     }
