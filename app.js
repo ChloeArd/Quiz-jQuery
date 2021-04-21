@@ -1,4 +1,4 @@
-$quizAnimaux = [
+$quizAnimals = [
     {"numero" : 1, "Question" : "Quel est la famille du chien ?", "choix1" : "Félidés", "choix2" : "Canidés", "choix3" : "Bovin", "choix4" : "Amphibien", "image" : "https://images.unsplash.com/photo-1506903536293-8419385acdce?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjV8fGRvZ3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 2, "Question" : "Comment s'appelle l'ancêtre commun à tous les êtres vivants ?", "choix1" : "LOLA", "choix2" : "LUCA", "choix3" : "ZOE", "choix4" : "REMI", "image" : "https://images.unsplash.com/photo-1477764250597-dffe9f601ae8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGFuaW1hbHN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 3, "Question" : "Comment appelle-t-on les animaux voyant la nuit ?", "choix1" : "Nyctalope", "choix2" : "Negrophile", "choix3" : "Nocturne", "choix4" : "Fisdupe", "image" : "https://images.unsplash.com/photo-1571659315127-8e882c129e0b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8b3dsfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
@@ -22,29 +22,29 @@ $answerAll = $("#answerAll");
 $score = 0;
 
 //Question 1
-$("#numero").html($quizAnimaux[0].numero);
-$("#questions").html($quizAnimaux[0].Question);
-$("#labelChoice1").html($quizAnimaux[0].choix1);
-$("#labelChoice2").html($quizAnimaux[0].choix2);
-$("#labelChoice3").html($quizAnimaux[0].choix3);
-$("#labelChoice4").html($quizAnimaux[0].choix4);
-$("#imageQuestion").attr("src", $quizAnimaux[0].image);
+$("#numero").html($quizAnimals[0].numero);
+$("#questions").html($quizAnimals[0].Question);
+$("#labelChoice1").html($quizAnimals[0].choix1);
+$("#labelChoice2").html($quizAnimals[0].choix2);
+$("#labelChoice3").html($quizAnimals[0].choix3);
+$("#labelChoice4").html($quizAnimals[0].choix4);
+$("#imageQuestion").attr("src", $quizAnimals[0].image);
 
 //animation
 $("#question2").fadeOut();
 $("#question2").fadeIn();
 
 //the answer to each question
-$answerQuestion1 = $quizAnimaux[0].choix2;
-$answerQuestion2 = $quizAnimaux[1].choix2;
-$answerQuestion3 = $quizAnimaux[2].choix1;
-$answerQuestion4 = $quizAnimaux[3].choix4;
-$answerQuestion5 = $quizAnimaux[4].choix3;
-$answerQuestion6 = $quizAnimaux[5].choix1;
-$answerQuestion7 = $quizAnimaux[6].choix3;
-$answerQuestion8 = $quizAnimaux[7].choix4;
-$answerQuestion9 = $quizAnimaux[8].choix2;
-$answerQuestion10 = $quizAnimaux[9].choix1;
+$answerQuestion1 = $quizAnimals[0].choix2;
+$answerQuestion2 = $quizAnimals[1].choix2;
+$answerQuestion3 = $quizAnimals[2].choix1;
+$answerQuestion4 = $quizAnimals[3].choix4;
+$answerQuestion5 = $quizAnimals[4].choix3;
+$answerQuestion6 = $quizAnimals[5].choix1;
+$answerQuestion7 = $quizAnimals[6].choix3;
+$answerQuestion8 = $quizAnimals[7].choix4;
+$answerQuestion9 = $quizAnimals[8].choix2;
+$answerQuestion10 = $quizAnimals[9].choix1;
 
 //When we press enter, we go to the next quiz and we check if the answer is right or wrong
 $buttonNext.click(function () {
@@ -72,13 +72,13 @@ $buttonNext.click(function () {
     }
     $("#question2").fadeOut(300);
     $("#question2").fadeIn(1000);
-    $("#numero").html($quizAnimaux[$index].numero);
-    $("#questions").html($quizAnimaux[$index].Question);
-    $("#labelChoice1").html($quizAnimaux[$index].choix1);
-    $("#labelChoice2").html($quizAnimaux[$index].choix2);
-    $("#labelChoice3").html($quizAnimaux[$index].choix3);
-    $("#labelChoice4").html($quizAnimaux[$index].choix4);
-    $("#imageQuestion").attr("src", $quizAnimaux[$index].image);
+    $("#numero").html($quizAnimals[$index].numero);
+    $("#questions").html($quizAnimals[$index].Question);
+    $("#labelChoice1").html($quizAnimals[$index].choix1);
+    $("#labelChoice2").html($quizAnimals[$index].choix2);
+    $("#labelChoice3").html($quizAnimals[$index].choix3);
+    $("#labelChoice4").html($quizAnimals[$index].choix4);
+    $("#imageQuestion").attr("src", $quizAnimals[$index].image);
     $("input:radio").prop("checked", false);
 });
 
