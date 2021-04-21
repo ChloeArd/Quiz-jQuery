@@ -9,7 +9,7 @@ $quizAnimaux = [
     {"numero" : 8, "Question" : "Comment appelle-t-on la femelle du sanglier ?", "choix1" : "La sanglia", "choix2" : "La marcasse", "choix3" : "La truie", "choix4" : "La laie", "image" : "https://images.unsplash.com/photo-1610279559937-b9d8251b2396?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Ym9hcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 9, "Question" : "Quels sont les deux sens du chat les plus développés ?", "choix1" : "L'ouïe et le toucher", "choix2" : "La vue et l'ouïe", "choix3" : "L'odorat et le goût", "choix4" : "La vue et le toucher", "image" : "https://images.unsplash.com/photo-1547045662-e5a75e7238c2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fGNhdHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"},
     {"numero" : 10, "Question" : "Quel est le cri de la brebis ?", "choix1" : "Le bêlement", "choix2" : "Le beuglement", "choix3" : "Le vagissement", "choix4" : "Le jappement", "image" : "https://images.unsplash.com/photo-1543305235-49385f50ccdc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTIyfHxzaGVlcHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"}
-]
+];
 
 $index = 0;
 $buttonNext = $("#enterNext");
@@ -80,7 +80,7 @@ $buttonNext.click(function () {
     $("#labelChoice4").html($quizAnimaux[$index].choix4);
     $("#imageQuestion").attr("src", $quizAnimaux[$index].image);
     $("input:radio").prop("checked", false);
-})
+});
 
 //When you press result, the final score is displayed and the answers too
 $result.click(function () {
